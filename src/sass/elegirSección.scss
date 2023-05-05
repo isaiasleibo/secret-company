@@ -1,0 +1,30 @@
+#elegirSeccion {
+    width: fit-content;
+    margin: 50px auto;
+    display: flex;
+
+    .section {
+        display: flex;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        margin: 0 50px;
+
+        img {
+            width: 300px;
+            height: 300px;
+            filter: brightness(70%);
+        }
+
+        p {
+            position: absolute;
+            top: 0; right: 0; left: 0; bottom: 0;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            color: white;
+            font-weight: 800;
+            font-size: 30px;
+        }
+    }
+}
