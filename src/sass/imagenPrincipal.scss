@@ -1,0 +1,13 @@
+#mainImg {
+    display: flex;
+    margin-top: 20px;
+
+    img {
+        width: 100%;
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        max-height: 600px;
+        object-fit: cover;
+        object-position: top;
+    }
+}

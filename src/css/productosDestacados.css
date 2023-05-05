@@ -1,0 +1,78 @@
+#productosDestacados {
+  width: fit-content;
+  margin: 40px auto;
+}
+#productosDestacados h2 {
+  width: fit-content;
+  margin-left: 40px;
+}
+#productosDestacados #productos {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#productosDestacados #productos .producto {
+  text-align: center;
+  width: fit-content;
+  margin: 10px 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+#productosDestacados #productos .producto img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+  user-select: none;
+  transition: all 400ms;
+  opacity: 1;
+}
+#productosDestacados #productos .producto .detalle {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#productosDestacados #productos .producto h3 {
+  font-size: 16px;
+}
+#productosDestacados #productos .producto #buttonContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  top: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+#productosDestacados #productos .producto button {
+  all: unset;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  font-weight: 500;
+  padding: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#productosDestacados #productos .producto:hover .defaultImg {
+  opacity: 0;
+}
+#productosDestacados #productos .producto:hover .detalle {
+  width: 250px;
+  opacity: 1;
+  background-color: rgb(226, 226, 226);
+}
+#productosDestacados #productos .producto:hover h3, #productosDestacados #productos .producto:hover h4 {
+  opacity: 0;
+  user-select: none;
+}
+#productosDestacados #productos .producto:hover #buttonContainer {
+  opacity: 1;
+}

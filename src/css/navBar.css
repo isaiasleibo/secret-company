@@ -1,0 +1,54 @@
+header {
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  width: 100%;
+}
+header #headerLinks {
+  display: flex;
+  margin-left: 10px;
+}
+header #headerLinks .link {
+  margin: 0 7px;
+  font-size: 14px;
+}
+header #headerLinks .link a {
+  text-decoration: none;
+  color: white;
+  outline: 0;
+}
+header #logoContainer {
+  position: absolute;
+  width: fit-content;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+}
+header #logoContainer img {
+  width: 100px;
+  margin: auto;
+}
+header #cartIconContainer {
+  margin-right: 20px;
+  position: relative;
+}
+header #cartIconContainer #cartIcon svg {
+  width: 20px;
+  fill: white;
+}
+header #cartIconContainer #cartBubble {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  border-radius: 50%;
+}

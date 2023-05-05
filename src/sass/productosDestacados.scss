@@ -1,0 +1,90 @@
+#productosDestacados {
+    width: fit-content;
+    margin: 40px auto;
+
+    h2 {
+        width: fit-content;
+        margin-left: 40px;
+    }
+
+    #productos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .producto {
+            text-align: center;
+            width: fit-content;
+            margin: 10px 20px;
+            padding-bottom: 10px;
+            position: relative;
+
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
+                margin: 0 auto;
+                // background: linear-gradient(to right, rgb(197, 197, 197), rgb(233, 233, 233));
+                background-color: rgb(240, 240, 240);
+                user-select: none;
+                transition: all 400ms;
+                opacity: 1;
+            }
+
+            .detalle {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            #buttonContainer {
+                position: absolute;
+                left: 0; right: 0; bottom: 10px; top: 250px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+            }
+
+            button {
+                all: unset;
+                background-color: rgb(39, 39, 39);
+                color: white;
+                font-weight: 500;
+                padding: 7px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            &:hover {
+                .defaultImg {
+                    opacity: 0;
+                }
+
+                .detalle {
+                    width: 250px;
+                    opacity: 1;
+                    background-color: rgb(226, 226, 226);
+                }
+
+                h3, h4 {
+                    opacity: 0;
+                    user-select: none;
+                }
+
+                #buttonContainer {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

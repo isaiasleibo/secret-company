@@ -1,0 +1,15 @@
+#verTodos {
+  background-image: url("../img//verTodos.png");
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#verTodos button {
+  all: unset;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
