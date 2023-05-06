@@ -13,4 +13,8 @@
   font-weight: 700;
   cursor: pointer;
   scale: 1.5;
+}
+#verTodos button a {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=verTodos.css.map */
