@@ -3,6 +3,7 @@ footer {
     color: white;
     padding: 30px 0;
     position: relative;
+    margin-top: auto;
 
     #topFooter {
         display: flex;
@@ -38,13 +39,5 @@ footer {
                 font-size: 14px;
             }
         }
-    }
-
-    #copy {
-        position: absolute;
-        text-align: center;
-        font-size: 14px;
-        bottom: 20px; right: 0; left: 0;
-        margin: auto;
     }
 }

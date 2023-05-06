@@ -1,5 +1,5 @@
 #verTodos {
-    background-image: url('../img//verTodos.png');
+    background-image: url('../../../img/verTodos.png');
     background-size: cover;
     height: 300px;
     display: flex;
@@ -12,5 +12,6 @@
         padding: 10px;
         font-weight: 700;
         cursor: pointer;
+        scale: 1.5;
     }
 }

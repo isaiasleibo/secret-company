@@ -1,0 +1,133 @@
+#productsFilterContainer {
+  background-color: rgb(43, 43, 43);
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#productsFilterContainer #inputContainer {
+  height: 100%;
+  position: relative;
+}
+#productsFilterContainer #inputContainer input {
+  all: unset;
+  background-color: rgb(226, 226, 226);
+  height: 100%;
+  width: 250px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+#productsFilterContainer #inputContainer svg {
+  width: 15px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  fill: black;
+}
+#productsFilterContainer #priceFilter {
+  margin-right: 5px;
+}
+#productsFilterContainer #priceFilter button {
+  all: unset;
+  height: 27px;
+  background-color: rgb(226, 226, 226);
+  font-size: 12px;
+  padding: 0 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#productosSection {
+  text-align: center;
+  padding: 30px 0;
+  padding-top: 70px;
+}
+#productosSection h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#productosSection h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+#productosSection #productos {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#productosSection #productos .producto {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+#productosSection #productos .producto img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 400ms;
+  opacity: 1;
+}
+#productosSection #productos .producto .detalle {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#productosSection #productos .producto h3 {
+  font-size: 16px;
+}
+#productosSection #productos .producto #buttonContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  top: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+#productosSection #productos .producto button {
+  all: unset;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  font-weight: 500;
+  padding: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#productosSection #productos .producto:hover .defaultImg {
+  opacity: 0;
+}
+#productosSection #productos .producto:hover .detalle {
+  width: 250px;
+  opacity: 1;
+  background-color: rgb(226, 226, 226);
+}
+#productosSection #productos .producto:hover h3, #productosSection #productos .producto:hover h4 {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#productosSection #productos .producto:hover #buttonContainer {
+  opacity: 1;
+}/*# sourceMappingURL=productosSection.css.map */

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/footer.css';
+import './footer.css';
 
 export const Footer = () => {
     const now = new Date();
@@ -12,8 +12,8 @@ export const Footer = () => {
                     <p className='footerTitle'>Navegación</p>
                     <div id="links">
                         <a href="/">Inicio</a>
-                        <a href="/">Productos</a>
-                        <a href="/">Contacto</a>
+                        <a href="/productos/">Productos</a>
+                        <a href="/contacto">Contacto</a>
                     </div>
                 </nav>
 
@@ -25,7 +25,6 @@ export const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p id='copy'>Secret Company - {currentYear}</p>
         </footer>
     )
 }

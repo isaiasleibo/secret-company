@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/verTodos.css';
+import './verTodos.css';
 
 export const VerTodos = () => {
   return (

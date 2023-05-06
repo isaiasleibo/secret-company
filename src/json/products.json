@@ -1,21 +1,90 @@
-[{
-    "id": 1,
-    "name": "Hoodie liberty",
-    "img": ["product1-1", "product1-2"],
-    "price": "$10.000"
-},{
-    "id": 2,
-    "name": "Hoodie New York",
-    "img": ["product2-1", "product2-2"],
-    "price": "$9.850"
-},{
-    "id": 3,
-    "name": "Hoodie reality",
-    "img": ["product3-1", "product3-2"],
-    "price": "$11.140"
-},{
-    "id": 1,
-    "name": "Hoodie liberty",
-    "img": ["product1-1", "product1-2"],
-    "price": "$10.000"
-}]
+[
+    {
+        "id": 1,
+        "tipo": "hoodie",
+        "destacado": true,
+        "name": "Hoodie liberty",
+        "img": [
+            "product1-1",
+            "product1-2"
+        ],
+        "price": "$10.000"
+    },
+    {
+        "id": 2,
+        "tipo": "hoodie",
+        "destacado": true,
+        "name": "Hoodie New York",
+        "img": [
+            "product2-1",
+            "product2-2"
+        ],
+        "price": "$9.850"
+    },
+    {
+        "id": 3,
+        "tipo": "hoodie",
+        "destacado": true,
+        "name": "Hoodie reality",
+        "img": [
+            "product3-1",
+            "product3-2"
+        ],
+        "price": "$11.140"
+    },
+    {
+        "id": 4,
+        "tipo": "hoodie",
+        "destacado": true,
+        "name": "Hoodie liberty",
+        "img": [
+            "product1-1",
+            "product1-2"
+        ],
+        "price": "$10.000"
+    },
+    {
+        "id": 5,
+        "tipo": "hoodie",
+        "destacado": false,
+        "name": "Hoodie liberty",
+        "img": [
+            "product1-1",
+            "product1-2"
+        ],
+        "price": "$10.000"
+    },
+    {
+        "id": 6,
+        "tipo": "hoodie",
+        "destacado": false,
+        "name": "Hoodie New York",
+        "img": [
+            "product2-1",
+            "product2-2"
+        ],
+        "price": "$9.850"
+    },
+    {
+        "id": 7,
+        "tipo": "hoodie",
+        "destacado": false,
+        "name": "Hoodie reality",
+        "img": [
+            "product3-1",
+            "product3-2"
+        ],
+        "price": "$11.140"
+    },
+    {
+        "id": 8,
+        "tipo": "hoodie",
+        "destacado": false,
+        "name": "Hoodie liberty",
+        "img": [
+            "product1-1",
+            "product1-2"
+        ],
+        "price": "$10.000"
+    }
+]

@@ -4,6 +4,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html,
+#root {
+  height: 100%;
+}
+
 body {
   margin-top: 70px;
+  height: calc(100% - 70px);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
