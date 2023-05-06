@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer/Footer';
 import { ImagenPrincipal } from '../components/pageHome/ImagenPrincipal/ImagenPrincipal';
 import { ProductosDestacados } from '../components/pageHome/ProductosDestacados/ProductosDestacados';
 import { VerTodos } from '../components/pageHome/VerTodos/VerTodos';
-import { ElegirSección } from '../components/pageHome/ElegirSección/ElegirSección';
+import { ElegirSeccion } from '../components/pageHome/ElegirSeccion/ElegirSeccion';
 
 export const Home = () => {
   return (
@@ -14,7 +14,7 @@ export const Home = () => {
       <main>
         <ProductosDestacados />
         <VerTodos />
-        <ElegirSección />
+        <ElegirSeccion />
       </main>
       <Footer />
     </>

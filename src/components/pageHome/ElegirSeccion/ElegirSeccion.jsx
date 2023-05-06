@@ -1,7 +1,7 @@
 import React from 'react';
-import './elegirSección.css';
+import './elegirSeccion.css';
 
-export const ElegirSección = () => {
+export const ElegirSeccion = () => {
   return (
     <div id="elegirSeccion">
       <a href="/hoodies">

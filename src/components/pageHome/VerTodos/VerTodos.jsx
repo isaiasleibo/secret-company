@@ -4,7 +4,9 @@ import './verTodos.css';
 export const VerTodos = () => {
   return (
     <div id="verTodos">
-        <button>Ver todos</button>
+        <button>
+          <a href='/productos/'>Ver Todos</a>
+        </button>
     </div>
   )
 }
