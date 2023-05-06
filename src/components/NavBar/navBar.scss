@@ -130,3 +130,66 @@ header {
         }
     }
 }
+
+
+
+#mobileHeader {
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    top: 70px;
+    z-index: 4;
+    padding: 20px;
+    padding-right: 25px;
+
+    #linksContainer {
+
+        .link {
+
+            a {
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+
+            p {
+                svg {
+                    margin-top: 1px;
+                    width: 20px;
+                    position: absolute;
+                    right: 4px;
+                }
+
+                svg.active {
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        #productOptions {
+            transition: all 200ms !important;
+            margin-bottom: 5px;
+            
+            .option {
+
+                a {
+                    color: rgb(71, 71, 71);
+                    text-decoration: none;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .link.active {
+            svg {
+                rotate: 180deg;
+            }
+        }
+
+        #productOptions.desactivated {
+            display: none;
+            height: 0;
+        }
+    }
+}
