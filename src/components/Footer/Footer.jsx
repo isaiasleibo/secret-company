@@ -2,9 +2,6 @@ import React from 'react';
 import './footer.css';
 
 export const Footer = () => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-
     return (
         <footer>
             <div id="topFooter">

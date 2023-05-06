@@ -8,7 +8,7 @@ export const ProductosDestacados = () => {
         <div id="productosDestacados">
             <h2>Productos destacados</h2>
 
-            <div id='productos' items={4}>
+            <div id='productos'>
                 {
                     productos.map(item => {
                         if (item.destacado) {

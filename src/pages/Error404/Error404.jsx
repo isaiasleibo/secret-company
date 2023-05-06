@@ -4,9 +4,6 @@ import { Footer } from '../../components/Footer/Footer';
 import './error404.css';
 
 export const Error404 = () => {
-  const footer = useRef();
-  const header = useRef();
-
   return (
     <>
       <NavBar  /> 
