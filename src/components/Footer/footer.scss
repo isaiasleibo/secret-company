@@ -40,4 +40,14 @@ footer {
             }
         }
     }
+
+    @media screen and (max-width: 600px) {
+        #topFooter {
+            flex-direction: column;
+
+            nav {
+                display: none;
+            }
+        }
+    }
 }

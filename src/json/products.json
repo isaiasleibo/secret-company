@@ -31,5 +31,15 @@
             "product3-2"
         ],
         "price": "$11.140"
+    }, {
+        "id": 4,
+        "tipo": "hoodie",
+        "destacado": true,
+        "name": "Hoodie Los Ángeles",
+        "img": [
+            "product4-1",
+            "product4-2"
+        ],
+        "price": "$11.000"
     }
 ]

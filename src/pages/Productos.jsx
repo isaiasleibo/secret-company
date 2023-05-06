@@ -11,13 +11,27 @@ export const Productos = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        if (window.location.pathname.includes("productos/hoodies")) {
-            setVariable("hoodie");
-            setSection(true);
-            setTitle("Hoodies");
-        } else {
+
+        // Identificar ruta
+        function checkSection() {
+            if (window.location.pathname === "/productos/hoodies/" || window.location.pathname === "/productos/hoodies") {
+                setVariable("hoodie");
+                setSection(true);
+                setTitle("Hoodies");
+                return;
+            } 
+            
+            if (window.location.pathname === "/productos/" || window.location.pathname === "/productos") {
+                setVariable("");
+                setSection(true);
+                setTitle("Todos");
+                return;
+            }
+
             setError(true);
         }
+
+        checkSection();
     }, [setVariable, setSection]);
 
     if (error) {
@@ -32,7 +46,5 @@ export const Productos = () => {
                 <Footer />
             </>
         );
-    } else {
-        console.error("Error 404");
     }
 }

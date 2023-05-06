@@ -3,11 +3,16 @@ import './navBar.css';
 
 // SVG
 import { CartIcon } from '../../img/CartIcon';
+import { HamburgerMenu } from '../../img/HamburgerMenu';
 
 export const NavBar = () => {
     return (
         <>
             <header>
+                <div id="HamburgerMenu">
+                    <HamburgerMenu />
+                </div>
+
                 <nav id="headerLinks">
                     <div className="link">
                         <a href="/">Inicio</a>

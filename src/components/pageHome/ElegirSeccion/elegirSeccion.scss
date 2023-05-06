@@ -1,14 +1,14 @@
 #elegirSeccion {
-    width: fit-content;
+    width: 100%;
     margin: 50px auto;
     display: flex;
+    justify-content: space-around;
 
     .section {
         display: flex;
         position: relative;
         width: fit-content;
         height: fit-content;
-        margin: 0 50px;
 
         img {
             width: 300px;
@@ -25,6 +25,36 @@
             color: white;
             font-weight: 800;
             font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        img {
+            width: 200px !important;
+            height: 200px !important;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        img {
+            width: 150px !important;
+            height: 150px !important;
+        }
+
+        p {
+            font-size: 23px !important;
+        }
+    }
+
+    @media screen and (max-width: 345px) {
+        flex-direction: column;
+        width: fit-content;
+        margin: 30px auto;
+
+        img {
+            width: 200px !important;
+            height: 200px !important;
+            margin: 10px 0;
         }
     }
 }

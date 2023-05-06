@@ -9,6 +9,16 @@ header {
   width: 100%;
   z-index: 3;
 }
+header #HamburgerMenu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+header #HamburgerMenu svg {
+  fill: white;
+  width: 30px;
+}
 header #headerLinks {
   display: flex;
   margin-left: 10px;
@@ -71,6 +81,14 @@ header #cartIconContainer #cartBubble {
   top: -3px;
   right: -5px;
   border-radius: 50%;
+}
+@media screen and (max-width: 750px) {
+  header #headerLinks {
+    display: none !important;
+  }
+  header #HamburgerMenu {
+    display: flex;
+  }
 }
 
 #productsOptions {

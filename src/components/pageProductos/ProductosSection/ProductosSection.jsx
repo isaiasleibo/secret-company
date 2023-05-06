@@ -43,9 +43,16 @@ export const ProductosSection = ({ section, title }) => {
           <input type="text" placeholder="Buscar" value={searchTerm} onChange={handleSearchTermChange} />
           <SearchIcon />
         </div>
+
         <div id="priceFilter">
-          <button onClick={filterHigherLower}>Mayor a menor</button>
-          <button onClick={filterLowerHigher}>Menor a mayor</button>
+          <p>Filtrar</p>
+
+          <div className="options">
+            <div className="items">
+              <button onClick={filterHigherLower}>Mayor a menor</button>
+              <button onClick={filterLowerHigher}>Menor a mayor</button>
+            </div>
+          </div>
         </div>
       </div>
 

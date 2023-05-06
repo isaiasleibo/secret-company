@@ -33,4 +33,12 @@ footer #topFooter #contacto ul {
   margin-top: 10px;
   list-style: none;
   font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  footer #topFooter {
+    flex-direction: column;
+  }
+  footer #topFooter nav {
+    display: none;
+  }
 }/*# sourceMappingURL=footer.css.map */
