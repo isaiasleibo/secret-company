@@ -1,4 +1,4 @@
-import React,{ useRef } from 'react';
+import React from 'react';
 import { NavBar } from '../../components/NavBar/NavBar';
 import { Footer } from '../../components/Footer/Footer';
 import './error404.css';

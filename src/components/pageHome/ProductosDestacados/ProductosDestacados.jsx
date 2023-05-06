@@ -24,6 +24,8 @@ export const ProductosDestacados = () => {
                                 </div>
                             )
                         }
+
+                        return null;
                     })
                 }
             </div>
