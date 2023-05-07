@@ -142,7 +142,6 @@ header #cartIconContainer #cartBubble {
   font-weight: 600;
 }
 #mobileHeader #linksContainer .link p svg {
-  margin-top: 1px;
   width: 20px;
   position: absolute;
   right: -20px;
