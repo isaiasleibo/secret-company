@@ -1,9 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import './productosSection.css';
-import productos from '../../../json/products.json';
 import { SearchIcon } from '../../../img/SearchIcon';
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 export const ProductosSection = ({ section, title }) => {
+  // Firebase
+  const [productos, setProducts] = useState([]);
+
+  useEffect(() => {
+    const db = getFirestore();
+    const query = collection(db, "products");
+
+    getDocs(query).then((querySnapshot) => {
+      const results = [];
+      querySnapshot.forEach((doc) => {
+        results.push(doc.data());
+      });
+      setProducts(results);
+    });
+  }, []);
+
+
+
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -15,7 +33,7 @@ export const ProductosSection = ({ section, title }) => {
       const itemsFiltrados = productos.filter(item => item.tipo === section);
       setItems(itemsFiltrados);
     }
-  }, [section]);
+  }, [section, productos]);
 
   // Filtros
   const filterHigherLower = () => {
@@ -65,8 +83,8 @@ export const ProductosSection = ({ section, title }) => {
             items.map(item => {
               return (
                 <div className="producto" key={item.id}>
-                  <img src={require(`../../../img/products/${item.img[0]}.png`)} className='defaultImg' alt="" />
-                  <img src={require(`../../../img/products/${item.img[1]}.png`)} className='detalle' alt="" />
+                  <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
+                  <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
                   <h3>{item.name}</h3>
                   <h4>{item.price}</h4>
                   <div id="buttonContainer">
