@@ -138,10 +138,14 @@ header {
     height: fit-content;
     width: fit-content;
     background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     top: 70px;
     z-index: 4;
     padding: 20px;
-    padding-right: 25px;
+    padding-right: 30px;
+    user-select: none;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 
     #linksContainer {
 
@@ -150,15 +154,19 @@ header {
             a {
                 text-decoration: none;
                 color: black;
-                position: relative;
+                font-weight: 600;
             }
 
             p {
+                position: relative;
+                cursor: pointer;
+                font-weight: 600;
+
                 svg {
                     margin-top: 1px;
                     width: 20px;
                     position: absolute;
-                    right: 4px;
+                    right: -20px;
                 }
 
                 svg.active {
@@ -190,6 +198,26 @@ header {
         #productOptions.desactivated {
             display: none;
             height: 0;
+        }
+    }
+
+    @keyframes showMobileHeader {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes hideMobileHeader {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -200px;
         }
     }
 }

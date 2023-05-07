@@ -1,14 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './navBar.css';
 
 // SVG
 import { CartIcon } from '../../img/CartIcon';
 import { HamburgerMenu } from '../../img/HamburgerMenu';
 import { BottomArrow } from '../../img/BottomArrow';
+import { CloseMenu } from '../../img/CloseMenu';
 
 export const NavBar = () => {
     const [mobileProductsActive, SetMPA] = useState("desactivated");
+    const MHButton = useRef();
+    const [openMenuStyle, setOpenMenuStyle] = useState("hideMobileHeader");
 
+    useEffect(() => {
+        const buttonRef = MHButton.current;
+      
+        function handleClick() {
+          setOpenMenuStyle(prevOpenMenuStyle => {
+            if (prevOpenMenuStyle === "showMobileHeader") {
+              return "hideMobileHeader";
+            } else {
+              return "showMobileHeader";
+            }
+          });
+      
+          buttonRef.removeEventListener('click', handleClick);
+      
+          setTimeout(() => {
+            buttonRef.addEventListener('click', handleClick);
+          }, 500);
+        }
+      
+        buttonRef.addEventListener('click', handleClick);
+      
+        return () => {
+          buttonRef.removeEventListener('click', handleClick);
+        };
+      }, []);
+      
     function changeMPA() {
         if (mobileProductsActive === "desactivated") {
             SetMPA("active");
@@ -20,8 +49,8 @@ export const NavBar = () => {
     return (
         <>
             <header>
-                <div id="HamburgerMenu">
-                    <HamburgerMenu />
+                <div id="HamburgerMenu" ref={MHButton}>
+                    {openMenuStyle === "hideMobileHeader" ? <HamburgerMenu /> : <CloseMenu />}
                 </div>
 
                 <nav id="headerLinks">
@@ -54,7 +83,7 @@ export const NavBar = () => {
                 </div>
             </header>
 
-            <div id="mobileHeader">
+            <div id="mobileHeader" style={{animationName: openMenuStyle}}>
                 <div id="linksContainer">
                     <div className="link">
                         <a href="/">Inicio</a>
