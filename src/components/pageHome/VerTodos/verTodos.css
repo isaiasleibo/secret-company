@@ -17,4 +17,9 @@
 #verTodos button a {
   text-decoration: none;
   color: black;
+}
+@media screen and (max-width: 750px) {
+  #verTodos {
+    height: 200px;
+  }
 }/*# sourceMappingURL=verTodos.css.map */

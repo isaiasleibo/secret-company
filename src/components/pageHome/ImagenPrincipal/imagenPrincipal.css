@@ -6,6 +6,7 @@
   margin: 0 auto;
   aspect-ratio: 16/9;
   max-height: 600px;
+  min-height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;

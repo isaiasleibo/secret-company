@@ -132,8 +132,8 @@ header {
 }
 
 
-
 #mobileHeader {
+    display: none;
     position: fixed;
     height: fit-content;
     width: fit-content;
@@ -219,5 +219,11 @@ header {
         100% {
             left: -200px;
         }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #mobileHeader {
+        display: block;
     }
 }

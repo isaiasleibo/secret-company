@@ -19,4 +19,8 @@
             color: black;
         }
     }
+
+    @media screen and (max-width: 750px) {
+        height: 200px;
+    }
 }

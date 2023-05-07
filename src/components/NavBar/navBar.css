@@ -113,6 +113,7 @@ header #cartIconContainer #cartBubble {
 }
 
 #mobileHeader {
+  display: none;
   position: fixed;
   height: -moz-fit-content;
   height: fit-content;
@@ -179,5 +180,11 @@ header #cartIconContainer #cartBubble {
   }
   100% {
     left: -200px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #mobileHeader {
+    display: block;
   }
 }/*# sourceMappingURL=navBar.css.map */
