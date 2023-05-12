@@ -1,9 +1,8 @@
-// WARNING in ./node_modules/react-router-dom/dist/index.js Module Warning (from ./node_modules/source-map-loader/dist/cjs.js): Failed to parse source map from 'index.js.map': SyntaxError: Unexpected end of JSON input
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Productos } from './pages/Productos';
+import { Producto } from './pages/Producto/Producto';
 import { Error404 } from './pages/Error404/Error404';
 
 function App() {
@@ -13,6 +12,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/productos/:category/" element={<Productos />} />
         <Route exact path="/productos/" element={<Productos />} />
+        <Route exact path="/producto/:productID" element={<Producto />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>

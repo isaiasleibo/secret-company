@@ -1,5 +1,5 @@
 #verTodos {
-  background-image: url("../../../img/verTodos.png");
+  background-image: url("../../../img/verTodos.webp");
   background-size: cover;
   height: 300px;
   display: flex;
@@ -22,4 +22,4 @@
   #verTodos {
     height: 200px;
   }
-}/*# sourceMappingURL=verTodos.css.map */
+}

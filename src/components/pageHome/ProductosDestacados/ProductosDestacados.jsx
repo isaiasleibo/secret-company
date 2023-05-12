@@ -6,6 +6,11 @@ export const ProductosDestacados = () => {
     const [productos, setProducts] = useState([]);
 
     useEffect(() => {
+        const cachedProducts = JSON.parse(localStorage.getItem('productosCache'));
+        if (cachedProducts) {
+            setProducts(cachedProducts);
+        }
+
         const db = getFirestore();
         const query = collection(db, "products");
 
@@ -14,6 +19,9 @@ export const ProductosDestacados = () => {
             querySnapshot.forEach((doc) => {
                 results.push(doc.data());
             });
+
+            localStorage.setItem('productosCache', JSON.stringify(results));
+
             setProducts(results);
         });
     }, []);
@@ -28,13 +36,16 @@ export const ProductosDestacados = () => {
                         if (item.destacado) {
                             return (
                                 <div className="producto" key={item.id}>
-                                    <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
-                                    <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
-                                    <h3>{item.name}</h3>
-                                    <h4>{item.price}</h4>
-                                    <div id="buttonContainer">
-                                        <button>Ver Producto</button>
-                                    </div>
+                                    <a href={`/producto/${item.id}`}>
+                                        <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
+                                        <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
+                                        <h3>{item.name}</h3>
+                                        <h4>{item.price}</h4>
+                                        <div id="buttonContainer">
+                                            <button>Ver Producto</button>
+                                        </div>
+                                    </a>
+
                                 </div>
                             )
                         }

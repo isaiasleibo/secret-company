@@ -6,13 +6,13 @@ export const ElegirSeccion = () => {
     <div id="elegirSeccion">
       <a href="/productos/hoodies/">
         <div className="section">
-          <img src={require('../../../img/hoodies.png')} alt="" />
+          <img src={require('../../../img/hoodies.webp')} alt="" />
           <p>HOODIES</p>
         </div>
       </a>
       <a href="/productos/remeras/">
         <div className="section">
-          <img src={require('../../../img/remeras.png')} alt="" />
+          <img src={require('../../../img/remeras.webp')} alt="" />
           <p>REMERAS</p>
         </div>
       </a>

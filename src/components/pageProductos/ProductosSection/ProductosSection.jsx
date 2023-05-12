@@ -4,10 +4,17 @@ import { SearchIcon } from '../../../img/SearchIcon';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 export const ProductosSection = ({ section, title }) => {
+
+
   // Firebase
   const [productos, setProducts] = useState([]);
 
   useEffect(() => {
+    const cachedProducts = JSON.parse(localStorage.getItem('productosCache'));
+    if (cachedProducts) {
+      setProducts(cachedProducts);
+    }
+
     const db = getFirestore();
     const query = collection(db, "products");
 
@@ -16,16 +23,17 @@ export const ProductosSection = ({ section, title }) => {
       querySnapshot.forEach((doc) => {
         results.push(doc.data());
       });
+
+      localStorage.setItem('productosCache', JSON.stringify(results));
+
       setProducts(results);
     });
   }, []);
 
 
-
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Identificar sección 
   useEffect(() => {
     if (section === "") {
       setItems(productos);
@@ -35,7 +43,6 @@ export const ProductosSection = ({ section, title }) => {
     }
   }, [section, productos]);
 
-  // Filtros
   const filterHigherLower = () => {
     const itemsOrdenados = [...items].sort((a, b) => parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1)));
     setItems(itemsOrdenados);
@@ -46,14 +53,13 @@ export const ProductosSection = ({ section, title }) => {
     setItems(itemsOrdenados);
   };
 
-  // Función para manejar el cambio en el input de búsqueda
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
     const itemsFiltrados = productos.filter(item => item.name.toLowerCase().includes(event.target.value.toLowerCase()));
     setItems(itemsFiltrados);
   };
 
-  // Estructura
+
   return (
     <>
       <div id="productsFilterContainer">
@@ -83,13 +89,15 @@ export const ProductosSection = ({ section, title }) => {
             items.map(item => {
               return (
                 <div className="producto" key={item.id}>
-                  <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
-                  <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
-                  <h3>{item.name}</h3>
-                  <h4>{item.price}</h4>
-                  <div id="buttonContainer">
-                    <button>Ver Producto</button>
-                  </div>
+                  <a href={`/producto/${item.id}`}>
+                    <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
+                    <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
+                    <h3>{item.name}</h3>
+                    <h4>{item.price}</h4>
+                    <div id="buttonContainer">
+                      <button>Ver Producto</button>
+                    </div>
+                  </a>
                 </div>
               );
             })
