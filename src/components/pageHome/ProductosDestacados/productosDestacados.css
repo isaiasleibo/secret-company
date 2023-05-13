@@ -30,7 +30,7 @@
   margin: 0 auto;
   background-color: rgb(240, 240, 240);
   user-select: none;
-  transition: all 400ms;
+  transition: opacity 400ms;
   opacity: 1;
 }
 #productosDestacados #productos .producto .detalle {
@@ -79,6 +79,11 @@
 }
 #productosDestacados #productos .producto:hover #buttonContainer {
   opacity: 1;
+}
+@media screen and (max-width: 1160px) and (min-width: 890px) {
+  #productosDestacados #buttonContainer {
+    top: 200px !important;
+  }
 }
 @media screen and (max-width: 1160px) {
   #productosDestacados #productos .producto {

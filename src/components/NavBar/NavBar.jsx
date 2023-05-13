@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './navBar.css';
 
 // SVG
@@ -55,21 +56,21 @@ export const NavBar = () => {
 
                 <nav id="headerLinks">
                     <div className="link">
-                        <a href="/">Inicio</a>
+                        <Link to="/">Inicio</Link>
                     </div>
                     <div className="link" id='productsOption'>
-                        <a href="/">Productos</a>
+                        <Link to="/">Productos</Link>
 
                         <div id="productsOptions">
                             <div className="options">
-                                <a href="/productos/hoodies/">Hoodies</a>
-                                <a href='/productos/remeras/'>Remeras</a>
-                                <a href='/productos/'>Todos</a>
+                                <Link to="/productos/hoodies/">Hoodies</Link>
+                                <Link to='/productos/remeras/'>Remeras</Link>
+                                <Link to='/productos/'>Todos</Link>
                             </div>
                         </div>
                     </div>
                     <div className="link">
-                        <a href="/contacto">Contacto</a>
+                        <Link to="/contacto">Contacto</Link>
                     </div>
                 </nav>
                 <div id="logoContainer">
@@ -86,24 +87,24 @@ export const NavBar = () => {
             <div id="mobileHeader" style={{animationName: openMenuStyle}}>
                 <div id="linksContainer">
                     <div className="link">
-                        <a href="/">Inicio</a>
+                        <Link to="/">Inicio</Link>
                     </div>
                     <div className={`link ${mobileProductsActive}`} onClick={changeMPA}>
                         <p href="/productos/">Productos <BottomArrow /></p>
                     </div>
                     <div id="productOptions" className={mobileProductsActive}>
                         <div className="option">
-                            <a href="/productos/hoodies/">Hoodies</a>
+                            <Link to="/productos/hoodies">Hoodies</Link>
                         </div>
                         <div className="option">
-                            <a href="/productos/remeras/">Remeras</a>
+                            <Link to="/productos/remeras">Remeras</Link>
                         </div>
                         <div className="option">
-                            <a href="/productos/">Todos</a>
+                            <Link to="/productos/">Todos</Link>
                         </div>
                     </div>
                     <div className="link">
-                        <a href="/contacto/">Contacto</a>
+                        <Link to="/contacto/">Contacto</Link>
                     </div>
                 </div>
             </div>

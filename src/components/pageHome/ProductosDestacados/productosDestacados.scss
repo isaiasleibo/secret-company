@@ -33,7 +33,7 @@
                 // background: linear-gradient(to right, rgb(197, 197, 197), rgb(233, 233, 233));
                 background-color: rgb(240, 240, 240);
                 user-select: none;
-                transition: all 400ms;
+                transition: opacity 400ms;
                 opacity: 1;
             }
 
@@ -90,6 +90,12 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 1160px) and (min-width: 890px) {
+        #buttonContainer {
+            top: 200px !important;
         }
     }
 

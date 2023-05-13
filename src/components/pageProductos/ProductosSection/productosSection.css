@@ -106,7 +106,7 @@
   margin: 0 auto;
   background-color: rgb(240, 240, 240);
   user-select: none;
-  transition: all 400ms;
+  transition: opacity 400ms;
   opacity: 1;
 }
 #productosSection #productos .producto .detalle {
@@ -156,6 +156,11 @@
 }
 #productosSection #productos .producto:hover #buttonContainer {
   opacity: 1;
+}
+@media screen and (max-width: 1160px) and (min-width: 890px) {
+  #productosSection #buttonContainer {
+    top: 200px !important;
+  }
 }
 @media screen and (max-width: 1160px) {
   #productosSection #productos .producto {
