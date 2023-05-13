@@ -94,10 +94,10 @@ export const NavBar = () => {
                     </div>
                     <div id="productOptions" className={mobileProductsActive}>
                         <div className="option">
-                            <Link to="/productos/hoodies">Hoodies</Link>
+                            <Link to="/productos/hoodies/">Hoodies</Link>
                         </div>
                         <div className="option">
-                            <Link to="/productos/remeras">Remeras</Link>
+                            <Link to="/productos/remeras/">Remeras</Link>
                         </div>
                         <div className="option">
                             <Link to="/productos/">Todos</Link>

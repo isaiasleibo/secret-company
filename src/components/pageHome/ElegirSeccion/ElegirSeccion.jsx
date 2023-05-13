@@ -1,21 +1,22 @@
 import React from 'react';
 import './elegirSeccion.css';
+import { Link } from 'react-router-dom';
 
 export const ElegirSeccion = () => {
   return (
     <div id="elegirSeccion">
-      <a href="/productos/hoodies/">
+      <Link to="/productos/hoodies/">
         <div className="section">
           <img src={require('../../../img/hoodies.webp')} alt="" />
           <p>HOODIES</p>
         </div>
-      </a>
-      <a href="/productos/remeras/">
+      </Link>
+      <Link to="/productos/remeras/">
         <div className="section">
           <img src={require('../../../img/remeras.webp')} alt="" />
           <p>REMERAS</p>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

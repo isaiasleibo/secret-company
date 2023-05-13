@@ -1,35 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './productosSection.css';
+import ProductList from '../../../database/connectDatabase';
 import { SearchIcon } from '../../../img/SearchIcon';
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { Link } from 'react-router-dom';
 
 export const ProductosSection = ({ section, title }) => {
-
-
-  // Firebase
-  const [productos, setProducts] = useState([]);
-
-  useEffect(() => {
-    const cachedProducts = JSON.parse(localStorage.getItem('productosCache'));
-    if (cachedProducts) {
-      setProducts(cachedProducts);
-    }
-
-    const db = getFirestore();
-    const query = collection(db, "products");
-
-    getDocs(query).then((querySnapshot) => {
-      const results = [];
-      querySnapshot.forEach((doc) => {
-        results.push(doc.data());
-      });
-
-      localStorage.setItem('productosCache', JSON.stringify(results));
-
-      setProducts(results);
-    });
-  }, []);
-
+  const productos = ProductList();
 
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -89,7 +65,7 @@ export const ProductosSection = ({ section, title }) => {
             items.map(item => {
               return (
                 <div className="producto" key={item.id}>
-                  <a href={`/producto/${item.id}`}>
+                  <Link to={`/producto/${item.id}`}>
                     <img src={require(`../../../img/products/${item.img[0]}`)} className='defaultImg' alt="" />
                     <img src={require(`../../../img/products/${item.img[1]}`)} className='detalle' alt="" />
                     <h3>{item.name}</h3>
@@ -97,7 +73,7 @@ export const ProductosSection = ({ section, title }) => {
                     <div id="buttonContainer">
                       <button>Ver Producto</button>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               );
             })
