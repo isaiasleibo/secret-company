@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavBar } from '../../components/NavBar/NavBar';
-import { Footer } from '../../components/Footer/Footer';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import './error404.css';
 
-export const Error404 = () => {
+const Error404 = () => {
   return (
     <>
       <NavBar  /> 
@@ -14,3 +14,5 @@ export const Error404 = () => {
     </>
   )
 }
+
+export default Error404

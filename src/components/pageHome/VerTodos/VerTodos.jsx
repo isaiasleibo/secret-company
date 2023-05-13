@@ -2,7 +2,7 @@ import React from 'react';
 import './verTodos.css';
 import { Link } from 'react-router-dom';
 
-export const VerTodos = () => {
+const VerTodos = () => {
   return (
     <div id="verTodos">
         <button>
@@ -11,3 +11,5 @@ export const VerTodos = () => {
     </div>
   )
 }
+
+export default VerTodos

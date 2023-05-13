@@ -2,7 +2,7 @@ import React from 'react';
 import './elegirSeccion.css';
 import { Link } from 'react-router-dom';
 
-export const ElegirSeccion = () => {
+const ElegirSeccion = () => {
   return (
     <div id="elegirSeccion">
       <Link to="/productos/hoodies/">
@@ -20,3 +20,5 @@ export const ElegirSeccion = () => {
     </div>
   )
 }
+
+export default ElegirSeccion

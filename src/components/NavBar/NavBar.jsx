@@ -8,37 +8,37 @@ import { HamburgerMenu } from '../../img/HamburgerMenu';
 import { BottomArrow } from '../../img/BottomArrow';
 import { CloseMenu } from '../../img/CloseMenu';
 
-export const NavBar = () => {
+const NavBar = () => {
     const [mobileProductsActive, SetMPA] = useState("desactivated");
     const MHButton = useRef();
     const [openMenuStyle, setOpenMenuStyle] = useState("hideMobileHeader");
 
     useEffect(() => {
         const buttonRef = MHButton.current;
-      
+
         function handleClick() {
-          setOpenMenuStyle(prevOpenMenuStyle => {
-            if (prevOpenMenuStyle === "showMobileHeader") {
-              return "hideMobileHeader";
-            } else {
-              return "showMobileHeader";
-            }
-          });
-      
-          buttonRef.removeEventListener('click', handleClick);
-      
-          setTimeout(() => {
-            buttonRef.addEventListener('click', handleClick);
-          }, 500);
+            setOpenMenuStyle(prevOpenMenuStyle => {
+                if (prevOpenMenuStyle === "showMobileHeader") {
+                    return "hideMobileHeader";
+                } else {
+                    return "showMobileHeader";
+                }
+            });
+
+            buttonRef.removeEventListener('click', handleClick);
+
+            setTimeout(() => {
+                buttonRef.addEventListener('click', handleClick);
+            }, 500);
         }
-      
+
         buttonRef.addEventListener('click', handleClick);
-      
+
         return () => {
-          buttonRef.removeEventListener('click', handleClick);
+            buttonRef.removeEventListener('click', handleClick);
         };
-      }, []);
-      
+    }, []);
+
     function changeMPA() {
         if (mobileProductsActive === "desactivated") {
             SetMPA("active");
@@ -76,15 +76,17 @@ export const NavBar = () => {
                 <div id="logoContainer">
                     <img src={require('../../img/logo.png')} alt="Logo" />
                 </div>
-                <div id="cartIconContainer">
-                    <div id="cartIcon">
-                        <CartIcon />
+                <Link to="/carrito">
+                    <div id="cartIconContainer">
+                        <div id="cartIcon">
+                            <CartIcon />
+                        </div>
+                        <div id="cartBubble"></div>
                     </div>
-                    <div id="cartBubble"></div>
-                </div>
+                </Link>
             </header>
 
-            <div id="mobileHeader" style={{animationName: openMenuStyle}}>
+            <div id="mobileHeader" style={{ animationName: openMenuStyle }}>
                 <div id="linksContainer">
                     <div className="link">
                         <Link to="/">Inicio</Link>
@@ -111,3 +113,5 @@ export const NavBar = () => {
         </>
     )
 }
+
+export default NavBar

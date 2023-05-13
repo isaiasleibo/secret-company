@@ -1,41 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { Error404 } from '../Error404/Error404';
-import { NavBar } from '../../components/NavBar/NavBar';
-import { Footer } from '../../components/Footer/Footer';
+import ProductList from '../../database/connectDatabase';
+import Error404 from '../Error404/Error404';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import './producto.css';
 
-export const Producto = () => {
+const Producto = () => {
+    const productos = ProductList();
     const [productB, setProductB] = useState(false);
     const [product, setProduct] = useState({});
-    const [productos, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-        const cachedProducts = JSON.parse(localStorage.getItem('productosCache'));
-        if (cachedProducts) {
-            setProducts(cachedProducts);
-            setLoading(false);
-        }
-
-        const db = getFirestore();
-        const query = collection(db, "products");
-
-        getDocs(query).then((querySnapshot) => {
-            const results = [];
-            querySnapshot.forEach((doc) => {
-                results.push(doc.data());
-            });
-
-            localStorage.setItem('productosCache', JSON.stringify(results));
-
-            setProducts(results);
-            setLoading(false);
-        });
-    }, []);
 
     useEffect(() => {
         if (productos.length > 0) {
+            setLoading(false);
             productos.map(item => {
                 if (window.location.pathname === `/producto/${item.id}/` || window.location.pathname === `/producto/${item.id}`) {
                     setProduct(item);
@@ -117,3 +95,5 @@ export const Producto = () => {
         return <Error404 />;
     }
 }
+
+export default Producto

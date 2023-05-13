@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Error404 } from './Error404/Error404';
-import { NavBar } from '../components/NavBar/NavBar';
-import { Footer } from '../components/Footer/Footer';
-import { ProductosSection } from '../components/pageProductos/ProductosSection/ProductosSection';
+import Error404 from './Error404/Error404';
+import NavBar from '../components/NavBar/NavBar';
+import Footer from '../components/Footer/Footer';
+import ProductosSection from '../components/pageProductos/ProductosSection/ProductosSection';
 
-export const Productos = () => {
+const Productos = () => {
   const location = useLocation();
   const [section, setVariable] = useState("");
   const [haySection, setSection] = useState(false);
@@ -14,9 +14,9 @@ export const Productos = () => {
 
   useEffect(() => {
     function checkSection() {
-        setError(false);
+      setError(false);
 
-      if (location.pathname.startsWith("/productos/hoodies")) {
+      if (location.pathname === "/productos/hoodies" || location.pathname === "/productos/hoodies/") {
         setVariable("hoodie");
         setSection(true);
         setTitle("Hoodies");
@@ -49,4 +49,6 @@ export const Productos = () => {
       </>
     );
   }
-};
+}
+
+export default Productos

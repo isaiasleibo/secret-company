@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavBar } from '../components/NavBar/NavBar';
-import { Footer } from '../components/Footer/Footer';
-import { ImagenPrincipal } from '../components/pageHome/ImagenPrincipal/ImagenPrincipal';
-import { ProductosDestacados } from '../components/pageHome/ProductosDestacados/ProductosDestacados';
-import { VerTodos } from '../components/pageHome/VerTodos/VerTodos';
-import { ElegirSeccion } from '../components/pageHome/ElegirSeccion/ElegirSeccion';
+import NavBar from '../components/NavBar/NavBar';
+import Footer from '../components/Footer/Footer';
+import ImagenPrincipal from '../components/pageHome/ImagenPrincipal/ImagenPrincipal';
+import ProductosDestacados from '../components/pageHome/ProductosDestacados/ProductosDestacados';
+import VerTodos from '../components/pageHome/VerTodos/VerTodos';
+import ElegirSeccion from '../components/pageHome/ElegirSeccion/ElegirSeccion';
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <NavBar />
@@ -20,3 +20,5 @@ export const Home = () => {
     </>
   )
 }
+
+export default Home

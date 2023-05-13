@@ -3,7 +3,7 @@ import './productosDestacados.css';
 import ProductList from '../../../database/connectDatabase';
 import { Link } from 'react-router-dom';
 
-export const ProductosDestacados = () => {
+const ProductosDestacados = () => {
     const productos = ProductList();
 
     return (
@@ -37,3 +37,5 @@ export const ProductosDestacados = () => {
         </div>
     )
 }
+
+export default ProductosDestacados

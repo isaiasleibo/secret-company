@@ -4,7 +4,7 @@ import ProductList from '../../../database/connectDatabase';
 import { SearchIcon } from '../../../img/SearchIcon';
 import { Link } from 'react-router-dom';
 
-export const ProductosSection = ({ section, title }) => {
+const ProductosSection = ({ section, title }) => {
   const productos = ProductList();
 
   const [items, setItems] = useState([]);
@@ -82,4 +82,6 @@ export const ProductosSection = ({ section, title }) => {
       </div>
     </>
   );
-};
+}
+
+export default ProductosSection
