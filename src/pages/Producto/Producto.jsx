@@ -10,7 +10,6 @@ export const Producto = () => {
     const [product, setProduct] = useState({});
     const [productos, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         const cachedProducts = JSON.parse(localStorage.getItem('productosCache'));
         if (cachedProducts) {

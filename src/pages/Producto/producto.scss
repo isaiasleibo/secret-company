@@ -6,10 +6,10 @@
 
 #productoContainer {
     height: calc(100% - 70px);
+    min-height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 620px;
 
     #producto {
         display: grid;
@@ -21,6 +21,7 @@
         padding: 20px;
         width: fit-content;
         max-width: calc(100% - 60px);
+        margin: 20px 0;
 
         img {
             background-color: white;
@@ -91,13 +92,15 @@
     }
 
     @media screen and (max-width: 1060px) {
+        min-height: 480px;
+
         img {
             width: 400px !important;
         }
     }
 
     @media screen and (max-width: 880px) {
-        min-height: 680px;
+        min-height: 683px;
 
         #producto {
             grid-template-areas: "1" "2";
@@ -111,18 +114,14 @@
     }
 
     @media screen and (max-width: 470px) {
+        min-height: 673px;
+
         img {
-            width: 300px !important;
+            width: calc(100vw - 80px) !important;
         }
     }
 
     @media screen and (max-width: 440px) {
-        min-height: 520px;
-
-        img {
-            width: 250px !important;
-        }
-
         h1 {
             font-size: 22px !important;
         }
@@ -130,5 +129,17 @@
         h2 {
             font-size: 18px !important;
         }
+    }
+
+    @media screen and (max-width: 435px) {
+        min-height: 615px;
+    }
+
+    @media screen and (max-width: 400px) {
+        min-height: 580px;
+    }
+
+    @media screen and (max-width: 350px) {
+        min-height: 530px;
     }
 }
