@@ -7,6 +7,8 @@
   aspect-ratio: 16/9;
   max-height: 600px;
   min-height: 400px;
-  object-fit: cover;
-  object-position: top;
-}
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}/*# sourceMappingURL=imagenPrincipal.css.map */
